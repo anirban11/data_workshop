@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop on Recent Developments on Arithmetic Theories and Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .speakers-list {
+            list-style: none;
+            padding: 0;
+        }
+        .speakers-list li {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Workshop on Recent Developments on Arithmetic Theories and Applications</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#speakers">Invited Speakers</a>
+        <a href="#schedule">Schedule & Venue</a>
+        <a href="#contact">Organizers</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About the Workshop</h2>
+	    <p>Logical Theories of Arithmetic are formal frameworks used to study numbers, their properties, and related arithmetic operations using logical reasoning. Examples include <b>Presburger Arithmetic</b>, first-order theory of natural numbers with addition and order, and <b>Peano Arithmetic</b>, which encompasses both addition and multiplication, along with the order predicate. These theories are foundational in mathematics and computer science, with applications raging from automated reasoning to verification. The workshop on "Recent Developments on Arithmetic Theories and Applications" aims to bring together researchers to explore recent advances in the field. By fostering discussions on recent results, the event seeks to promote collaborative research in the area of First-Order (and higher-order) Arithmetical theories while inspiring young researchers to contribute to this field. This workshop is a satellite event of 11th Indian Conference of Logic and Its Applications (<a href=https://logicindia.org/icla/icla2025/>ICLA, 2025</a>).</p>
+        </section>
+
+        <section id="speakers" class="section">
+            <h2>Invited Speakers</h2>
+            <ul class="speakers-list">
+                <li><em>Alessio Mansutti (IMDEA Software Institute, Spain)</em></li>
+		<h3>Title: An optimal geometric procedure for Presburger arithmetic</h3><p>Abstract: In [Pacific J. Math., 16(2), 1966] Ginsburg and Spanier established
+a fundamental result regarding the geometry of the solutions
+of a Presburger arithmetic formula. A set is definable in
+Presburger arithmetic if and only if it is semilinear.
+The importance of this result is not only theoretical:
+several applications stemming from program verification
+and compiler optimization require reasoning
+on the set of solutions of a Presburger arithmetic formula.
+For these applications, semilinear sets are the right tool.
+
+<br>
+To show the left to right implication of their result,
+Ginsburg and Spanier argued as follows:
+<br>
+&emsp;&nbsp;-set of solutions of any system of linear
+inequalities over the integers is semilinear
+<br>
+&emsp;&nbsp;-semilinear sets are closed under union, projection
+and complementation.
+<br>
+These facts directly give a "geometric procedure" that,
+given a Presburger arithmetic formula, computes a semilinear
+set representing all its solutions.
+<br>
+Following the result of Ginsburg and Spanier, several
+authors tried to improve the geometric procedure to
+make it as efficient as the other decision procedures
+for Presburger arithmetic (which are based on
+quantifier elimination or automata). See e.g. [Huynh,
+ICALP'80], [Chistikov and Haase, ICALP'16] and [Beier
+et al., AFL'17] for a few papers on this issue. The
+crucial problem turned out to be the definition of an
+optimal algorithm for the complementation of a
+semilinear set, which stood open for a few decades.
+In 2022, Dmitry Chistikov, Christoph Haase and I
+discovered such an algorithm, and in this talk I will
+describe some of its core steps. Surprisingly,
+from properties of the semilinear sets computed following
+our procedure, we can also answer a conjecture of
+D. Nguyen and I. Pak [Combinatorica 39, pp. 923–932, 2019]
+on the hardness of PAC learning Presburger formulae.
+In particular, we find that the Vapnik–Chervonenkis (VC) dimension
+of a Presburger arithmetic formula is at most doubly exponential
+in the size of the formula; and this bound is tight for an infinite
+family of formulae.
+<br>
+This talk is based on the paper "Geometric decision
+procedures and the VC dimension of linear arithmetic
+theories" [Chistikov, Haase, Mansutti, 59, LICS'22].</p>
+                <li><em>Mikhail R. Starchak (St. Petersburg University, Russia)</em></li>
+		
+		<h3>Title: B&#252chi Arithmetic: Finite Automata and Quantifier Elimination.</h3>
+		
+		<p>
+		Abstract: In the early 1960s, R. J. Büchi made a fundamental discovery: decidability of arithmetic theories can be established using automata theory. Moreover, the exact expressive power of finite automata can be described via an extension of Presburger arithmetic, which is now known as Büchi arithmetic. The nature of this theory is radically different from the well-studied Presburger arithmetic, and for this reason the classical questions of complexity and expressivity for Büchi arithmetic remained unsolved for a long time.
+	<br>
+In my talk, I will first give a sketch of the proof of the Büchi's theorem and then show the relationships between Büchi arithmetic and the integer arithmetic of addition and usual bitwise operations NOT, AND, OR.
+Next, I will show why the quantifier-elimination approach, which is not applicable to prove decidability of Büchi arithmetic, becomes a powerful tool for studying the expressive power of its existential fragment.
+Finally, it will be shown that the developed quantifier-elimination techniques can be combined with the decision procedure for Presburger arithmetic with the base 2 exponentiation. This combination provides a new algorithm for the integer linear-exponential programming feasibility, which was (before 2024) only known to be decidable in exponential space using a purely automata-theoretic procedure. In contrast, the quantifier-elimination procedure runs in non-deterministic polynomial time.</p>
+
+                <li><em>Chris K&#246cher (Max-Planck Institute for Software Systems, Germany)</em></li>
+		<h3>Title: The Separability Problem for Presburger Definable Sets and Parikh Automata </h3>
+		<p>Abstract: In a separability problem, we are given two sets K and L from a class C, and we want to decide whether there exists a set R from a class S such that K ⊆ R and R ∩ L = ∅. In this case, we speak of separability of sets in C by sets in S. This problem has applications in safety verification: it can be used to certify the disjointness of the reachable configurations in a program with a set of undesired states.
+<br>
+We study two types of separability problems. First, we consider separability of Presburger definable sets, i.e. semilinear sets, by sets definable by quantifier-free monadic Presburger formulas (or equivalently, the recognizable subsets of ℕ^d). Here, a formula is monadic if each atom uses at most one variable. Second, we consider separability of languages of Parikh automata by regular languages. A Parikh automaton is a machine with access to counters that can only be incremented, and have to meet a semilinear constraint at the end of the run. Both of these separability problems are known to be decidable with elementary complexity.
+<br>
+Our main results are that both problems are coNP-complete. In the case of semilinear sets, coNP-completeness holds regardless of whether the input sets are specified by existential Presburger formulas, quantifier-free formulas, or semilinear representations. Our results imply that recognizable separability of rational subsets of Σ^* × ℕ^d (shown decidable by Choffrut and Grigorieff) is coNP-complete as well. Another application is that regularity of deterministic Parikh automata (where the target set is specified using a quantifier-free Presburger formula) is coNP-complete as well. </p>
+                <li><em>Toghrul Karimov (Max-Planck Institute for Software Systems, Germany)</em></li>
+		<h3>Title: From Word Combinatorics to Automatic Structures.</h3>
+		<p>Abstract: Sturmian words are the simplest non-periodic words: a word w of zeros and ones is Sturmian if for every n, the number of distinct factors of w of length n is exactly n+1. I will discuss recent applications of Sturmian and other special classes of words (e.g. billiard words) with rich combinatorics to automatic structures, focussing on two results: the monadic second-order theory of natural numbers expanded with two power predicates (e.g. powers of two and powers of three) is decidable and the first-order theory of Presburger arithmetic expanded with two power predicates is undecidable for already formulas with three alternating blocks of quantifiers.
+		  </p>
+            </ul>
+        </section>
+
+<section id="schedule" class="section">
+    <h2>Schedule and Venue</h2>
+    <p><strong>Date:</strong> February 1, 2025</p>
+    <p><strong>Venue:</strong> ISI Kolkata</p>
+    
+    <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
+        <tr style="background: #4CAF50; color: white;">
+            <th>Time</th>
+            <th>Event</th>
+            <th>Speaker</th>
+        </tr>
+        <tr>
+            <td>09:30 - 09:45</td>
+            <td>Opening Remarks/Introduction</td>
+            <td></td>
+        </tr>
+<tr>
+            <td>09:45 - 10:30</td>
+            <td>Büchi Arithmetic: Finite Automata and Quantifier Elimination</td>
+            <td>Mikhail R. Starchak</td>
+        </tr>
+        <tr>
+            <td>10:30 - 11:00</td>
+            <td>Coffee Break</td>
+            <td>-</td>
+        </tr>
+<tr>
+            <td>11:00 - 11:45</td>
+            <td>From Word Combinatorics to Automatic Structures</td>
+            <td>Toghrul Karimov</td>
+        </tr>
+ <tr>
+            <td>11:45 - 12:30</td>
+            <td>The Separability Problem for Presburger Definable Sets and Parikh Automata</td>
+            <td>Chris Köcher</td>
+        </tr>
+ <tr>
+            <td>12:35 - 13:05</td>
+            <td>An optimal geometric procedure for Presburger arithmetic</td>
+            <td>Alessio Mansutti</td>
+ </tr>
+
+  <tr>
+            <td>13:05 - 13:10</td>
+            <td>Closing Remarks</td>
+            <td></td>
+        </tr>
+                  
+    </table>
+</section>
+
+
+
+        <section id="contact" class="section">
+          <h2>Organizers</h2>
+	  <ul>
+	    <li><em>Georg Zetzsche, Max-Planck Institute for Software Systems, Germany</em></li>
+	    <li><em>Khushraj Madnani, Max-Planck Institute for Software Systems, Germany</em></li>
+	    </ul>
+            <p>For more information, please reach out to us at <a href="mailto:kmadnani@mpi-sws.org">kmadnani@mpi-sws.org</a>.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Workshop on Recent Developments on Arithmetic Theories and Applications</p>
+    </footer>
+</body>
+</html>
+
